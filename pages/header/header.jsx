@@ -2,10 +2,13 @@ import React from 'react';
 import styles from './header.module.css';
 
 export const Header = (props) => {
-    return (        
+    return (
         <div className={styles.wrapper}>
-                  <div className={styles.notification}></div>
-                  <div>Иванов</div>
+            <div className={styles.notification}></div>
+            <div className={styles.userInfo}>
+                <div className={styles.userInfoIco}></div>
+                <div className={styles.userInfoName}>Иванова А.</div>
+            </div>
         </div>
     )
 }

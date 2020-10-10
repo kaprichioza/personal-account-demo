@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.bradCrumbs {
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding-bottom: 18px;
+    }
+    .title {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .bradCrumbs {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

@@ -12,4 +12,7 @@
     .container {
         padding: 16px 12px;
     }
+    .wrapper {
+        background-image: url(../../public/bg-mob.png);
+    }
 }

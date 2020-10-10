@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Page } from './Page/page'
 import { Header } from './header/header';
+import { Navigation } from './navigation/navigation';
+import { Main } from './main/main';
 
 export default function Home() {
   return (
@@ -11,7 +13,8 @@ export default function Home() {
       </Head>
       <Page>
         <Header />
-        {/* <Navigation /> */}
+        <Navigation />
+        <Main />
       </Page>
     </>
   )
