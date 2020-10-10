@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import { Page } from './Page/page'
-import { Header } from './header/header';
-import { Navigation } from './navigation/navigation';
-import { Main } from './main/main';
+import { Page } from './components/Page/page'
+import { Header } from './components/header/header';
+import { Navigation } from './components/navigation/navigation';
+import { Main } from './components/main/main';
 
 export default function Home() {
   return (

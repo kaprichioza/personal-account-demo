@@ -1,0 +1,64 @@
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+.email {
+    border-bottom: 1px solid #cae7fe;
+    display: flex;
+    align-items: center;
+}
+.emailIco {
+    background-image: url(../../../public/email-ico.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    margin: 30px 0 30px 75px;
+}
+.emailText {
+    padding-left: 45px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #313131;
+}
+.phoneNumber {
+    display: flex;
+    align-items: center;
+}
+.phoneIco {
+    background-image: url(../../../public/phone-ico.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
+    margin: 34.5px 0 34.5px 76px;
+}
+.phoneNumberText {
+    padding-left: 46.5px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #313131;
+}
+@media screen and (max-width: 768px) {
+    .emailText {
+        padding-left: 12px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .phoneIco {
+        width: 18px;
+        height: 18px;
+        margin: 23px 0 23px 13px;
+    }
+    .phoneNumberText {
+        padding-left: 13px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}

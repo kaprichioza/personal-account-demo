@@ -11,7 +11,7 @@
     padding-right: 20px;
 }
 .notification {
-    background-image: url(../../public/notif-ico.svg);
+    background-image: url(../../../public/notif-ico.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -20,7 +20,7 @@
     margin-right: 26px;
 }
 .userInfoIco {
-    background-image: url(../../public/contact-ico.png);
+    background-image: url(../../../public/contact-ico.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
