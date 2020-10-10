@@ -57,6 +57,14 @@
     width: 18px;
     height: 18px;
 }
+.crossIco {
+    background-image: url(../../../public/cross-ico.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+}
 .info {
     margin-bottom: 24px;
 }

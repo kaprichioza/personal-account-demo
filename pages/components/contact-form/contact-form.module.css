@@ -45,6 +45,18 @@
     line-height: 25px;
     color: #313131;
 }
+.fields {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+.field {
+    display: flex;
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
 @media screen and (max-width: 768px) {
     .emailText {
         padding-left: 12px;
