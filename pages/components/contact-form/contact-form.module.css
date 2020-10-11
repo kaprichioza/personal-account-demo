@@ -49,13 +49,69 @@
     display: flex;
     justify-content: space-around;
     flex: 1;
+    margin: 47px 0;
 }
 .field {
     display: flex;
+    justify-content: space-around;
+    flex-basis: calc(100% / 3);
+    align-items: center;
+}
+.field > div + div,
+.fieldEmail > div + div {
+    max-height: 56px;
+    width: 65%;
+}
+.fieldEmail {
+    display: flex;
+    border-right: 1px solid #cae7fe;
+    border-left: 1px solid #cae7fe;
+    justify-content: space-around;
+    flex-basis: calc(100% / 3);
+    align-items: center;
+}
+.fieldContactIco {
+    background-image: url(../../../public/contact-icon.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 30px;
+}
+.fieldEmailIco {
+    background-image: url(../../../public/email-ico.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.fieldPhoneIco {
+    background-image: url(../../../public/phone-ico.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
 }
 .button {
     display: flex;
     justify-content: center;
+    padding-bottom: 44px;
+}
+.button > button {
+    background-color: #01bda7;
+    padding: 15px 26px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #ffffff;
+    border-radius: 36px;
+    border: none;
+    outline: none;
+}
+.button > button:hover {
+    background-color: #01bda7;
 }
 @media screen and (max-width: 768px) {
     .emailText {
@@ -72,5 +128,31 @@
         padding-left: 13px;
         font-size: 14px;
         line-height: 19px;
+    }
+    .emailIco {
+        width: 20px;
+        height: 20px;
+        margin: 22px 0 22px 12px;
+    }
+    .fields {
+        flex-direction: column;
+        padding: 26px 23px;
+        margin: 0;
+    }
+    .fieldContactIco,
+    .fieldEmailIco,
+    .fieldPhoneIco {
+        display: none;
+    }
+    .field > div + div,
+    .fieldEmail > div + div {
+        max-height: 56px;
+        width: 100%;
+    }
+    .fieldEmail {
+        margin: 40px 0;
+    }
+    .button {
+        padding-bottom: 17px;
     }
 }

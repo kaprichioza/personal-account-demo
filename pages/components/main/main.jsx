@@ -33,7 +33,7 @@ export const Main = (props) => {
                 <div className={styles.rightSide}>
                     <div className={styles.edit}>
                         <div className={styles.editText} onClick={toggleEdit}>{isEditEnabled ? 'ЗАКРЫТЬ' : 'РЕДАКТИРОВАТЬ'}</div>
-                        <div className={isEditEnabled ? styles.crossIco : styles.editIco}></div>
+                        <div className={isEditEnabled ? styles.crossIco : styles.editIco} onClick={toggleEdit}></div>
                     </div>
                 </div>
             </div>

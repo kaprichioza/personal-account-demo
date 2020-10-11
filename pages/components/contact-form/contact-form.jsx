@@ -1,31 +1,32 @@
-import { Button, TextField } from '@material-ui/core';
 import React from 'react'
 import { Form, Field } from 'react-final-form'
 import styles from './contact-form.module.css';
 import { TextFieldAdapter } from './../text-field-adapter/text-field-adapter';
-import axios from 'axios';
+import { SaveChanges } from '../save-changes/saveChanges';
 
-export const ContactForm = (props) => {
-    const onSubmit = (form) => {
-        axios.post('/api/login', form)
-            .then(() => props.onSaveSuccess(form))
-    }
+export const ContactForm = (props) => {    
     const initialValues = {
         name: props.name,
         phone: props.phone,
         email: props.email,
     };
+    const onSubmit = (form) => {
+        axios.post('/api/login', form)
+            .then(() => props.onSaveSuccess(form))
+    }
     const validate = (values) => {
         const errors = {}
-        debugger;
-        if (!values.name) {
-            errors.name = 'Required'
+        const validationFIO = new RegExp(`^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?\\s[А-ЯЁ][а-яё]*\\s[А-ЯЁ][а-яё]*$`, 'u');
+        if (!validationFIO.test(values.name)) {
+            errors.name = 'Вы неверно указали имя'
         }
-        if (!values.email) {
-            errors.email = 'Required'
+        const validationEmail = new RegExp(/\S+@\S+\.\S+/);
+        if (!validationEmail.test(values.email)) {
+            errors.email = 'Вы неверно указали почту'
         }
-        if (!values.phone) {
-            errors.phone = 'Required'
+        const validationPhone = new RegExp(/(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?/);
+        if (!validationPhone.test(values.phone)) {
+            errors.phone = 'Вы неверно указали телефон'
         }
         return errors
     };
@@ -40,6 +41,7 @@ export const ContactForm = (props) => {
                         <form className={styles.form} onSubmit={handleSubmit}>
                             <div className={styles.fields}>
                                 <div className={styles.field}>
+                                    <div className={styles.fieldContactIco}></div>
                                     <Field
                                         name="name"
                                         label="Фамилия и имя"
@@ -47,38 +49,34 @@ export const ContactForm = (props) => {
                                         variant="outlined"
                                         component={TextFieldAdapter}
                                     />
-                                    <div></div>
+
                                 </div>
-                                <div>
+                                <div className={styles.fieldEmail}>
+                                    <div className={styles.fieldEmailIco}></div>
                                     <Field
-                                        name="phone"
+                                        name="email"
                                         label="E-mail"
                                         placeholder="Ivanova@mail.ru"
                                         variant="outlined"
                                         component={TextFieldAdapter}
                                     />
-                                    <div></div>
+
                                 </div>
-                                <div>
+                                <div className={styles.field}>
+                                    <div className={styles.fieldPhoneIco}></div>
                                     <Field
-                                        name="email"
+                                        name="phone"
                                         label="Номер телефона"
                                         placeholder="Укажите номер телефона"
                                         variant="outlined"
                                         component={TextFieldAdapter}
                                     />
-                                    <div></div>
                                 </div>
-                            </div>
-                            <div className={styles.button}>
-                                <Button variant="contained" color="primary" type="submit"> Primary</Button>
-                            </div>
+                            </div>                            
+                            <SaveChanges />
                         </form>
                     )}
                 />
-
-
-
                 : <>
                     <div className={styles.email}>
                         <div className={styles.emailIco}></div>
