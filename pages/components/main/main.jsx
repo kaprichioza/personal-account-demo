@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import styles from './main.module.css';
 import { ContactForm } from './../contact-form/contact-form';
-import cn from 'classnames';
 
 const initialState = {
     name: 'Иванова Анна Михайловна',
-    email: '',
-    phone: '',
+    email: 'Ivanova@mail.ru',
+    phone: 'Укажите номер телефона',
     isEditEnabled: false,
+    shortName: 'Иванова А',
 };
 export const Main = (props) => {
     const [contactFormState, setContactFormState] = useState(initialState);
     const { isEditEnabled, name, phone, email } = contactFormState;
     const toggleEdit = () => {
-        setContactFormState({ ...contactFormState, isEditEnabled: !isEditEnabled });
+        setContactFormState({ ...contactFormState, isEditEnabled: !isEditEnabled, shortName: props.name(name), });
     }
-    const saveContacts = (contacts) => {
+    const saveContacts = (contacts) => {        
         setContactFormState({
             ...contactFormState,
             ...contacts,
-            isEditEnabled: !isEditEnabled
+            isEditEnabled: !isEditEnabled,
+            shortName: props.name(contacts.name),
         });
 
     }

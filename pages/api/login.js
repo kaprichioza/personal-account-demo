@@ -9,13 +9,13 @@ export default (req, res) => {
     const config = {
         headers: {
             'Content-Type': 'application/json',
+            'charset': 'utf-8',
             'x-token-access': 'random',
         },
     }
     return axios
         .post('http://jsonplaceholder.typicode.com/posts', req.body, config)
-        .then((response) => {      
-
+        .then((response) => {
             res.end(JSON.stringify(response.data));
             res.statusCode = 200;            
         })

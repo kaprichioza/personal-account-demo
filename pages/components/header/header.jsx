@@ -7,7 +7,7 @@ export const Header = (props) => {
             <div className={styles.notification}></div>
             <div className={styles.userInfo}>
                 <div className={styles.userInfoIco}></div>
-                <div className={styles.userInfoName}>Иванова А.</div>
+                <div className={styles.userInfoName}>{props.children}</div>
             </div>
         </div>
     )

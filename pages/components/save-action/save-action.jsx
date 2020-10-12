@@ -1,19 +1,16 @@
 import React from 'react'
-import styles from './saveChanges.module.css';
+import styles from './save-action.module.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { Button, IconButton } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import axios from 'axios';
+
 const initialState = {
     modalStepOne: false,
     modalStepTwo: false,
 };
-export const SaveChanges = (props) => {
-    // const onSubmit = (form) => {
-    //     axios.post('/api/login', form)
-    //         .then(() => props.onSaveSuccess(form))
-    // }
+export const SaveAction = (props) => {
+    
     const useStyles = makeStyles((theme) => ({
         paper: {
             position: 'absolute',
@@ -67,6 +64,12 @@ export const SaveChanges = (props) => {
                 right: '25px',
             }
         },
+        stepTwo: {
+            ['@media (max-width:768px)']: {
+                top: 'calc(100% - 186px)',   
+                transform: 'translate(-50%, 0)',        
+            }
+        },
         '@global': {
             '[class*="titleStepTwo"]+[class*="saveChanges_button"]': {
                 ['@media (max-width:768px)']: {
@@ -85,10 +88,11 @@ export const SaveChanges = (props) => {
 
     };
     const closeModal = () => {
-        setModalState({ ...modalState, modalStepOne: false, modalStepTwo: false });
+        if (modalState.modalStepTwo) props.onSaveSuccess(props.form)
+        setModalState({ ...modalState, modalStepOne: false, modalStepTwo: false });        
     };
     const body = (
-        <div className={classes.paper}>
+        <div className={modalStepOne ? classes.paper : `${classes.paper} ${classes.stepTwo}`}>
             <div className={styles.wrapper}>
                 {modalStepOne
                     ? <p className={classes.title}>Сохранить изменения?</p>
@@ -96,7 +100,7 @@ export const SaveChanges = (props) => {
                 }
                 {modalStepOne
                     ? <div className={styles.button}>
-                        <Button onClick={() => { openModal(false); /*onSubmit(props.form)*/ }} variant="contained" color="primary" type="button">Сохранить</Button>
+                        <Button onClick={() => { props.onSubmit(props.form).then(()=> {openModal(false); window.localStorage.setItem('userData', JSON.stringify(props.form))}) }} variant="contained" color="primary" type="button">Сохранить</Button>
                     </div>
                     : <div className={styles.button}>
                         <Button onClick={closeModal} variant="contained" color="primary" type="button">Хорошо</Button>
@@ -115,7 +119,7 @@ export const SaveChanges = (props) => {
     return (
         <div>
             <div className={styles.button}>
-                <Button onClick={() => { openModal(true) }} variant="contained" color="primary" type="submit">Сохранить изменения</Button>
+                <Button onClick={() => { openModal(true) }} variant="contained" color="primary" type="submit" disabled={props.disabled}>Сохранить изменения</Button>
             </div>
             <Modal
                 open={modalStepOne || modalStepTwo}
