@@ -1,0 +1,61 @@
+.wrapper {
+    position: relative;
+    padding: 56px;
+}
+.wrapper:focus {
+    outline: none;
+}
+.container .MuiPaper-root {
+    padding: 60px;
+}
+p+.button {
+    padding-bottom: 26px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 44px;
+}
+.button > button {
+    background-color: #01bda7;
+    padding: 15px 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #ffffff;
+    border-radius: 36px;
+    width: 220px;
+    border: none;
+    outline: none;
+}
+.button > button:hover {
+    background-color: #01bda7;
+}
+.cancel {
+    display: flex;
+    justify-content: center;   
+}
+.cancel > button {
+    color: #01bda7 !important;
+    border: 1px solid #01bda7 !important;
+    padding: 15px 26px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    border-radius: 36px;
+    width: 220px;
+}
+.isHidden {
+    display: none !important;
+}
+@media screen and (max-width: 768px) {
+    .button {
+        padding-bottom: 17px;
+    }
+    .wrapper {
+        padding: 65px 20px 0 20px;
+    }
+    .button+.isHidden {
+        display: none;
+    }
+}

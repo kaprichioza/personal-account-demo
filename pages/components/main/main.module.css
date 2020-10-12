@@ -1,0 +1,101 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.leftSide {
+    display: flex;
+    align-items: center;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(270deg, #1a78c2 0%, #1a78c2 101.06%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+.contactIco {
+    background-image: url(../../../public/contact-ico-big.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 24px 0 24px 30px;
+}
+.name {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    color: #ffffff;
+    padding-left: 42px;
+    padding-right: 10px;
+}
+.rightSide {
+    display: flex;
+    padding-right: 50px;
+}
+.edit {
+    display: flex;
+    align-items: center;
+}
+.editText {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-right: 10px;
+}
+.editIco {
+    background-image: url(../../../public/edit.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.crossIco {
+    background-image: url(../../../public/cross-ico.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+}
+.info {
+    margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {    
+    .contactIco {
+        width: 40px;
+        height: 40px;
+        margin: 16px 0 15px 10px;
+    }
+    .name {   
+        font-size: 14px;
+        line-height: 19px;      
+        padding-left: 10px;
+    }
+    .rightSide {
+        display: flex;
+        padding-right: 13px;
+    }
+    .edit {
+        display: flex;
+        align-items: center;
+    }
+    .editText {
+        display: none;
+    }    
+    .emailIco {       
+        width: 20px;
+        height: 20px;
+        margin: 22px 0 22px 12px;
+    }
+    .info {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,18 @@
+.container {
+    padding: 24px;    
+}
+.wrapper {
+    min-height: 100vh;
+    background-image: url(../../../public/bg-wrapper.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 16px 12px;
+    }
+    .wrapper {
+        background-image: url(../../../public/bg-mob.png);
+    }
+}

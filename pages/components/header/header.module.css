@@ -1,0 +1,62 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 22px;
+}
+.userInfo {
+    display: flex;
+    border-left: 1px solid #ffffff;
+    padding-right: 20px;
+}
+.notification {
+    background-image: url(../../../public/notif-ico.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 24px;
+    height: 30px;
+    margin-right: 26px;
+}
+.userInfoIco {
+    background-image: url(../../../public/contact-ico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin-left: 26px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.userInfoName {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: white;
+    align-self: center;
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding-bottom: 18px;
+    }
+    .userInfo {
+        padding-right: 0;
+    }
+    .notification {
+        width: 16px;
+        height: 19.5px;
+        margin-right: 14px;
+    }
+    .userInfoIco {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .userInfoName {
+        display: none;
+    }
+}
