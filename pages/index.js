@@ -1,6 +1,6 @@
 import React , { useState } from 'react';
 import Head from 'next/head';
-import { Page } from './components/Page/page';
+import { Page } from './components/page/page';
 import { Main } from './components/main/main';
 
 export default function Home() {  
