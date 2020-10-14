@@ -8,7 +8,7 @@ import axios from 'axios';
 export const ContactForm = (props) => {    
     const initialValues = {
         name: props.name,
-        phone: props.phone,
+        phone: /\S+@\S+\.\S+/.test(props.phone) ? props.phone : '',
         email: props.email,
     };
 
