@@ -16,7 +16,7 @@
     border-radius: 10px;
 }
 .contactIco {
-    background-image: url(../../../public/contact-ico-big.png);
+    background-image: url(../../public/contact-ico-big.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
     padding-right: 10px;
 }
 .editIco {
-    background-image: url(../../../public/edit.png);
+    background-image: url(../../public/edit.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@
     height: 18px;
 }
 .crossIco {
-    background-image: url(../../../public/cross-ico.png);
+    background-image: url(../../public/cross-ico.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
