@@ -12,7 +12,7 @@
     align-items: center;
 }
 .emailIco {
-    background-image: url(../../../public/email-ico.png);
+    background-image: url(../../public/email-ico.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@
     align-items: center;
 }
 .phoneIco {
-    background-image: url(../../../public/phone-ico.png);
+    background-image: url(../../public/phone-ico.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@
     align-items: center;
 }
 .fieldContactIco {
-    background-image: url(../../../public/contact-icon.png);
+    background-image: url(../../public/contact-icon.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@
     height: 30px;
 }
 .fieldEmailIco {
-    background-image: url(../../../public/email-ico.png);
+    background-image: url(../../public/email-ico.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@
     height: 30px;
 }
 .fieldPhoneIco {
-    background-image: url(../../../public/phone-ico.png);
+    background-image: url(../../public/phone-ico.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
